@@ -1,0 +1,29 @@
+import {createContext, FC, ReactNode, useContext, useState} from 'react';
+
+interface ThemeContextProps {
+    theme: string
+    toggleTheme: () => void
+}
+
+export const ThemeContext = createContext<ThemeContextProps|undefined>(undefined)
+
+export const ThemeProvider:FC<{children: ReactNode}> = ({children}) => {
+
+    const [theme, setTheme] = useState("light")
+
+    const toggleTheme = () => {
+        setTheme(theme ===  "light"? "dark":"light")
+    }
+
+    return (<ThemeContext.Provider value={{theme, toggleTheme}}>
+        {children}
+    </ThemeContext.Provider> )
+}
+
+export const useTheme = ()  => {
+    const context = useContext(ThemeContext)
+    if(!context){
+        throw new Error("useTheme must be used within a ThemeProvider")
+    }
+    return context
+}
