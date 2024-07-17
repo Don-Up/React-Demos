@@ -19,11 +19,19 @@ import {I18nPage} from "./i18n/I18nPage";
 import {RefPage} from "./ref/RefPage";
 import {ForwardRefPage} from "./ref/ForwardRefPage";
 import {ForwardRefPage1} from "./ref/ForwardRefPage1";
+import {data} from "autoprefixer";
+import {FormPage} from "./form/FormPage";
+import {DataTransPage} from "./datatransmisson/DataTransPage";
+import {ReduxPage} from "./redux/ReduxPage";
+import {Provider} from "react-redux";
+import store from "./redux/js/store";
 
 function App() {
   return (
     <div className="App">
-      <ForwardRefPage1/>
+        <Provider store={store}>
+            <ReduxPage/>
+        </Provider>
     </div>
   );
 }
