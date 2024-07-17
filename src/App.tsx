@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {ErrorBoundaryPage} from "./errorboundary/ErrorBoundaryPage";
 import HOCLoadingPage from "./hoc/HOCPage";
@@ -25,13 +24,15 @@ import {DataTransPage} from "./datatransmisson/DataTransPage";
 import {ReduxPage} from "./redux/ReduxPage";
 import {Provider} from "react-redux";
 import store from "./redux/js/store";
+import {FlexPage} from "./tailwind/FlexPage";
+import {TextPage} from "./tailwind/TextPage";
+import {SizePage} from "./tailwind/SizePage";
+import {RouterPage} from "./router/RouterPage";
 
 function App() {
   return (
     <div className="App">
-        <Provider store={store}>
-            <ReduxPage/>
-        </Provider>
+        <RouterPage/>
     </div>
   );
 }

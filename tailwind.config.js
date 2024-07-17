@@ -6,6 +6,9 @@ module.exports = {
   },
   variants: {
     extend: {
+      flex: {
+        "2": "2 2 0%",
+      },
       keyframes: {
         slide: {
           "0%": {transform: "translateX(0)"},
@@ -17,7 +20,7 @@ module.exports = {
         colors: {
           olivedrab: '#6B8E23',
         }
-      }
+      },
     },
   },
   plugins: [],
