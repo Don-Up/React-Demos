@@ -28,11 +28,12 @@ import {FlexPage} from "./tailwind/FlexPage";
 import {TextPage} from "./tailwind/TextPage";
 import {SizePage} from "./tailwind/SizePage";
 import {RouterPage} from "./router/RouterPage";
+import {RTGPage} from "./animation/RTGPage";
 
 function App() {
   return (
     <div className="App">
-        <RouterPage/>
+        <RTGPage/>
     </div>
   );
 }
